@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/listLeague">
+    <fragment
+        android:id="@+id/listLeague"
+        android:name="com.rizkirakasiwi.kade.fragment.ui.ListLeague"
+        android:label="list_league_fragment"
+        tools:layout="@layout/list_league_fragment" >
+        <action
+            android:id="@+id/action_listLeague_to_leagueDetail"
+            app:destination="@id/leagueDetail" />
+        <action
+            android:id="@+id/action_listLeague_to_search"
+            app:destination="@id/search" />
+        <action
+            android:id="@+id/action_listLeague_to_favorite"
+            app:destination="@id/favorite" />
+    </fragment>
+    <fragment
+        android:id="@+id/leagueDetail"
+        android:name="com.rizkirakasiwi.kade.fragment.ui.LeagueDetail"
+        android:label="league_detail_fragment"
+        tools:layout="@layout/league_detail_fragment" >
+        <action
+            android:id="@+id/action_leagueDetail_to_detailMatch"
+            app:destination="@id/detailMatch" />
+        <action
+            android:id="@+id/action_leagueDetail_to_detailTeam"
+            app:destination="@id/detailTeam" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailMatch"
+        android:name="com.rizkirakasiwi.kade.fragment.ui.DetailMatch"
+        android:label="detail_match_fragment"
+        tools:layout="@layout/detail_match_fragment" />
+    <fragment
+        android:id="@+id/detailTeam"
+        android:name="com.rizkirakasiwi.kade.fragment.ui.DetailTeam"
+        android:label="detail_team_fragment"
+        tools:layout="@layout/detail_team_fragment" />
+    <fragment
+        android:id="@+id/search"
+        android:name="com.rizkirakasiwi.kade.fragment.ui.Search"
+        android:label="search_fragment"
+        tools:layout="@layout/search_fragment" >
+        <action
+            android:id="@+id/action_search_to_detailTeam"
+            app:destination="@id/detailTeam" />
+        <action
+            android:id="@+id/action_search_to_detailMatch"
+            app:destination="@id/detailMatch" />
+    </fragment>
+    <fragment
+        android:id="@+id/favorite"
+        android:name="com.rizkirakasiwi.kade.fragment.ui.Favorite"
+        android:label="favorite_fragment"
+        tools:layout="@layout/favorite_fragment" >
+        <action
+            android:id="@+id/action_favorite_to_detailMatch"
+            app:destination="@id/detailMatch" />
+        <action
+            android:id="@+id/action_favorite_to_detailTeam"
+            app:destination="@id/detailTeam" />
+    </fragment>
+</navigation>
